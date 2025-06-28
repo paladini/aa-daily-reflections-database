@@ -1,6 +1,8 @@
 # 📖 AA Daily Reflections Database
 
-**Complete year of Alcoholics Anonymous Daily Reflections in 3 languages**
+**Complete year of Alcoholics Anonymous Daily Reflections in English, Spanish, and French**
+
+*365 daily meditations and spiritual reflections from AA available in multiple formats (SQLite, JSON, CSV) for recovery apps, multilingual communities, and personal spiritual practice.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Languages](https://img.shields.io/badge/Languages-3-blue.svg)]()
