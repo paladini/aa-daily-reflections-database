@@ -1,0 +1,22 @@
+{
+  "name": "aa-daily-reflections-examples",
+  "version": "1.0.0",
+  "description": "Usage examples for AA Daily Reflections Database",
+  "main": "basic_usage.js",
+  "scripts": {
+    "start": "node basic_usage.js",
+    "example": "node basic_usage.js"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.6"
+  },
+  "keywords": [
+    "aa",
+    "alcoholics-anonymous",
+    "daily-reflections",
+    "database",
+    "sqlite"
+  ],
+  "author": "AA Daily Reflections Database Project",
+  "license": "MIT"
+}
