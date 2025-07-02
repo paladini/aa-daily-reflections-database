@@ -23,16 +23,28 @@ type Reflection struct {
 
 // ReflectionsDB handles database operations
 type ReflectionsDB struct {
-	dbPath string
+	dbPath    string
+	languages map[string]string
 }
 
 // NewReflectionsDB creates a new database handler
 func NewReflectionsDB(dbPath string) *ReflectionsDB {
 	if dbPath == "" {
-		dbPath = "../data/reflections.db"
+		dbPath = "../../data/reflections.db"
 	}
 	absPath, _ := filepath.Abs(dbPath)
-	return &ReflectionsDB{dbPath: absPath}
+	
+	languages := map[string]string{
+		"english": "🇺🇸 English",
+		"spanish": "🇪🇸 Español",
+		"french":  "🇫🇷 Français",
+		"pt-BR":   "🇧🇷 Português (Brasil)",
+	}
+	
+	return &ReflectionsDB{
+		dbPath:    absPath,
+		languages: languages,
+	}
 }
 
 func (db *ReflectionsDB) getConnection() (*sql.DB, error) {
@@ -306,9 +318,10 @@ func printMultilingualReflection(reflections map[string]Reflection, date string)
 		"english": "🇺🇸 ENGLISH",
 		"spanish": "🇪🇸 ESPAÑOL",
 		"french":  "🇫🇷 FRANÇAIS",
+		"pt-BR":   "🇧🇷 PORTUGUÊS (BRASIL)",
 	}
 
-	languageOrder := []string{"english", "spanish", "french"}
+	languageOrder := []string{"english", "spanish", "french", "pt-BR"}
 	for i, langCode := range languageOrder {
 		if reflection, exists := reflections[langCode]; exists {
 			langDisplay := languages[langCode]
@@ -373,16 +386,16 @@ func main() {
 		printMultilingualReflection(multilingualReflections, "2025-01-01")
 	}
 
-	// Example 3: Random reflection
-	fmt.Println("\n3️⃣  Random Reflection (Spanish):")
-	randomReflection, err := db.GetRandomReflection("spanish")
+	// Example 3: Random reflection in Portuguese
+	fmt.Println("\n3️⃣  Random Reflection (Brazilian Portuguese):")
+	randomReflection, err := db.GetRandomReflection("pt-BR")
 	if err != nil {
 		log.Printf("Error getting random reflection: %v", err)
 	} else {
 		printReflection(randomReflection, true)
 	}
 
-	// Example 4: Search
+	// Example 4: Search in English
 	fmt.Println("\n4️⃣  Search Results for 'peace':")
 	searchResults, err := db.SearchReflections("peace", "english")
 	if err != nil {
@@ -398,8 +411,24 @@ func main() {
 		}
 	}
 
-	// Example 5: Statistics
-	fmt.Println("\n5️⃣  Database Statistics:")
+	// Example 5: Search in Portuguese
+	fmt.Println("\n5️⃣  Search Results for 'Deus' (Portuguese):")
+	searchResultsPt, err := db.SearchReflections("Deus", "pt-BR")
+	if err != nil {
+		log.Printf("Error searching Portuguese reflections: %v", err)
+	} else {
+		fmt.Printf("Found %d reflections containing 'Deus':\n", len(searchResultsPt))
+		for i, reflection := range searchResultsPt {
+			if i >= 1 {
+				break
+			}
+			fmt.Printf("\n   Resultado %d:\n", i+1)
+			printReflection(&reflection, false)
+		}
+	}
+
+	// Example 6: Statistics
+	fmt.Println("\n6️⃣  Database Statistics:")
 	stats, err := db.GetStatistics()
 	if err != nil {
 		log.Printf("Error getting statistics: %v", err)
@@ -412,8 +441,11 @@ func main() {
 
 		if byLanguage, ok := stats["by_language"].(map[string]int); ok {
 			for lang, count := range byLanguage {
-				langName := strings.Title(lang)
-				fmt.Printf("│ %15s: %28d │\n", langName, count)
+				langDisplay := db.languages[lang]
+				if langDisplay == "" {
+					langDisplay = strings.Title(lang)
+				}
+				fmt.Printf("│ %15s: %28d │\n", langDisplay, count)
 			}
 		}
 		fmt.Printf("└%s┘\n", strings.Repeat("─", 48))

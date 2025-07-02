@@ -1,13 +1,13 @@
 # 📖 AA Daily Reflections Database
 
-**Complete year of Alcoholics Anonymous Daily Reflections in English, Spanish, and French**
+**Complete year of Alcoholics Anonymous Daily Reflections in English, Spanish, French, and Brazilian Portuguese**
 
 *365 daily meditations and spiritual reflections from AA available in multiple formats (SQLite, JSON, CSV) for recovery apps, multilingual communities, and personal spiritual practice.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Languages](https://img.shields.io/badge/Languages-3-blue.svg)]()
+[![Languages](https://img.shields.io/badge/Languages-4-blue.svg)]()
 
-**📖 Read this in other languages:** [🇪🇸 Español](README_ES.md) | [🇫🇷 Français](README_FR.md)
+**📖 Read this in other languages:** [🇪🇸 Español](README_ES.md) | [🇫🇷 Français](README_FR.md) | [🇧🇷 Português](README_PT.md)
 
 ## 🚀 Quick Download
 
@@ -20,14 +20,15 @@ Choose your preferred format and language:
 ### 📄 Individual Languages
 | Language | JSON | CSV |
 |----------|------|-----|
-| 🇺🇸 **English** | [JSON](data/english/daily_reflections_english.json) | [CSV](data/english/daily_reflections_english.csv) |
-| 🇪🇸 **Español** | [JSON](data/spanish/daily_reflections_spanish.json) | [CSV](data/spanish/daily_reflections_spanish.csv) |
-| 🇫🇷 **Français** | [JSON](data/french/daily_reflections_french.json) | [CSV](data/french/daily_reflections_french.csv) |
+| 🇺🇸 **English** | [JSON](data/daily_reflections_english.json) | [CSV](data/daily_reflections_english.csv) |
+| 🇪🇸 **Español** | [JSON](data/daily_reflections_spanish.json) | [CSV](data/daily_reflections_spanish.csv) |
+| 🇫🇷 **Français** | [JSON](data/daily_reflections_french.json) | [CSV](data/daily_reflections_french.csv) |
+| 🇧🇷 **Português** | [JSON](data/daily_reflections_brazilian-portuguese.json) | [CSV](data/daily_reflections_brazilian-portuguese.csv) |
 
 ## 📋 What's Included
 
 - **Complete year coverage**: All 365 days of AA daily reflections
-- **Multilingual**: Available in English, Spanish, and French
+- **Multilingual**: Available in English, Spanish, French, and Brazilian Portuguese
 - **Complete data**: Title, quote, reflection text, and source reference
 - **Multiple formats**: SQLite database, JSON files, and CSV spreadsheets
 - **Ready to use**: Perfect for apps, websites, or personal projects

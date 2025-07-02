@@ -1,11 +1,11 @@
 # AA Daily Reflections - Usage Examples
 
-This directory contains practical examples of how to use the AA Daily Reflections database in different programming languages.
+This directory contains practical examples of how to use the AA Daily Reflections database in different programming languages. All examples now support **4 languages**: English, Spanish, French, and **Brazilian Portuguese**.
 
 ## 📂 Available Examples
 
 ### 🐍 Python (`basic_usage.py`)
-Complete Python example with enhanced formatting and multilingual display.
+Complete Python example with enhanced formatting and multilingual display, including Brazilian Portuguese support.
 
 **Requirements:**
 - Python 3.6+
@@ -17,7 +17,7 @@ python basic_usage.py
 ```
 
 ### 🟨 JavaScript/Node.js (`basic_usage.js`)
-Full-featured Node.js example with async/await patterns.
+Full-featured Node.js example with async/await patterns and support for all 4 languages.
 
 **Requirements:**
 - Node.js 12+
@@ -30,7 +30,7 @@ npm start
 ```
 
 ### 🐘 PHP (`basic_usage.php`)
-PHP example compatible with most PHP installations.
+PHP example compatible with most PHP installations, with full support for Brazilian Portuguese.
 
 **Requirements:**
 - PHP 7.0+
@@ -42,7 +42,7 @@ php basic_usage.php
 ```
 
 ### 🐹 Go (`basic_usage.go`)
-Go example with proper error handling and struct definitions.
+Go example with proper error handling, struct definitions, and complete multilingual support.
 
 **Requirements:**
 - Go 1.19+
@@ -59,30 +59,38 @@ go run basic_usage.go
 All examples showcase the following operations:
 
 ### 1. **Today's Reflection**
-Get the current day's reflection in any language.
+Get the current day's reflection in any of the 4 supported languages.
 
 ### 2. **Multilingual Display** 
-Beautiful side-by-side comparison of the same reflection in English, Spanish, and French with enhanced formatting including:
+Beautiful side-by-side comparison of the same reflection in **English, Spanish, French, and Brazilian Portuguese** with enhanced formatting including:
 - Bordered text boxes
 - Proper text wrapping
 - Unicode flags and emojis
 - Centered headers
 
 ### 3. **Random Reflection**
-Retrieve a random reflection for inspiration.
+Retrieve a random reflection for inspiration in any language.
 
 ### 4. **Search Functionality**
-Search across titles, quotes, and reflection text.
+Search across titles, quotes, and reflection text in any language (examples include searches in both English and Portuguese).
 
 ### 5. **Database Statistics**
-Get counts by language and other metrics.
+Get counts by language and other metrics for all 4 languages.
+
+## 🌐 Language Support
+
+Each example demonstrates:
+- **🇺🇸 English** - Original AA reflections
+- **🇪🇸 Spanish** - Reflexiones diarias en español  
+- **🇫🇷 French** - Réflexions quotidiennes en français
+- **🇧🇷 Portuguese (Brazil)** - Reflexões diárias em português brasileiro
 
 ## 🎨 Enhanced Pretty Printing
 
 All examples feature:
 - **Unicode borders** and decorative elements
 - **Text wrapping** for readability
-- **Multi-language support** with flag emojis
+- **Multi-language support** with flag emojis (🇺🇸🇪🇸🇫🇷🇧🇷)
 - **Formatted dates** in local format
 - **Structured layout** for easy reading
 

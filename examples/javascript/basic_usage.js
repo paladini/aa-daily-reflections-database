@@ -3,6 +3,7 @@
  * AA Daily Reflections - JavaScript/Node.js Usage Examples
  * 
  * This script demonstrates basic operations with the AA Daily Reflections database using Node.js.
+ * Supports English, Spanish, French, and Brazilian Portuguese.
  * Dependencies: sqlite3
  * Install with: npm install sqlite3
  */
@@ -11,8 +12,14 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
 class ReflectionsDB {
-    constructor(dbPath = '../data/reflections.db') {
+    constructor(dbPath = '../../data/reflections.db') {
         this.dbPath = path.resolve(__dirname, dbPath);
+        this.languages = {
+            'english': '🇺🇸 English',
+            'spanish': '🇪🇸 Español',
+            'french': '🇫🇷 Français',
+            'pt-BR': '🇧🇷 Português (Brasil)'
+        };
     }
 
     async getTodayReflection(language = 'english') {
@@ -237,9 +244,11 @@ function printMultilingualReflection(reflections, date) {
     const languages = {
         'english': '🇺🇸 ENGLISH',
         'spanish': '🇪🇸 ESPAÑOL',
-        'french': '🇫🇷 FRANÇAIS'
+        'french': '🇫🇷 FRANÇAIS',
+        'pt-BR': '🇧🇷 PORTUGUÊS (BRASIL)'
     };
 
+    const languageKeys = Object.keys(languages);
     Object.entries(languages).forEach(([langCode, langDisplay], index) => {
         if (reflections[langCode]) {
             const reflection = reflections[langCode];
@@ -266,7 +275,7 @@ function printMultilingualReflection(reflections, date) {
             
             console.log(`\n📚 ${reflection.reference}`);
             
-            if (index < Object.keys(languages).length - 1) {
+            if (index < languageKeys.length - 1) {
                 console.log(`\n${'·'.repeat(100)}`);
             }
         }
@@ -291,12 +300,12 @@ async function main() {
         const multilingualReflections = await db.getMultilingualReflection('2025-01-01');
         printMultilingualReflection(multilingualReflections, '2025-01-01');
         
-        // Example 3: Random reflection
-        console.log('\n3️⃣  Random Reflection (Spanish):');
-        const randomReflection = await db.getRandomReflection('spanish');
+        // Example 3: Random reflection in Portuguese
+        console.log('\n3️⃣  Random Reflection (Brazilian Portuguese):');
+        const randomReflection = await db.getRandomReflection('pt-BR');
         printReflection(randomReflection);
         
-        // Example 4: Search
+        // Example 4: Search in English
         console.log('\n4️⃣  Search Results for \'serenity\':');
         const searchResults = await db.searchReflections('serenity', 'english');
         console.log(`Found ${searchResults.length} reflections containing 'serenity':`);
@@ -305,8 +314,17 @@ async function main() {
             printReflection(reflection, false);
         });
         
-        // Example 5: Statistics
-        console.log('\n5️⃣  Database Statistics:');
+        // Example 5: Search in Portuguese
+        console.log('\n5️⃣  Search Results for \'Deus\' (Portuguese):');
+        const searchResultsPt = await db.searchReflections('Deus', 'pt-BR');
+        console.log(`Found ${searchResultsPt.length} reflections containing 'Deus':`);
+        searchResultsPt.slice(0, 1).forEach((reflection, index) => {
+            console.log(`\n   Resultado ${index + 1}:`);
+            printReflection(reflection, false);
+        });
+        
+        // Example 6: Statistics
+        console.log('\n6️⃣  Database Statistics:');
         const stats = await db.getStatistics();
         console.log(`┌${'─'.repeat(48)}┐`);
         console.log(`│ ${'📊 DATABASE STATISTICS'.padStart(30).padEnd(46)} │`);
@@ -314,8 +332,8 @@ async function main() {
         console.log(`│ Total Reflections: ${stats.total_reflections.toString().padStart(28)} │`);
         console.log(`├${'─'.repeat(48)}┤`);
         Object.entries(stats.by_language).forEach(([lang, count]) => {
-            const langName = lang.charAt(0).toUpperCase() + lang.slice(1);
-            console.log(`│ ${langName.padStart(15)}: ${count.toString().padStart(28)} │`);
+            const langDisplay = db.languages[lang] || lang.charAt(0).toUpperCase() + lang.slice(1);
+            console.log(`│ ${langDisplay.padStart(15)}: ${count.toString().padStart(28)} │`);
         });
         console.log(`└${'─'.repeat(48)}┘`);
         
