@@ -4,7 +4,6 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
-	"math/rand"
 	"path/filepath"
 	"strings"
 	"time"
@@ -366,7 +365,7 @@ func center(text string, width int) string {
 func main() {
 	fmt.Println("🌟 AA Daily Reflections Database - Go Examples\n")
 
-	db := NewReflectionsDB("../data/reflections.db")
+	db := NewReflectionsDB("../../data/reflections.db")
 
 	// Example 1: Today's reflection
 	fmt.Println("1️⃣  Today's Reflection (English):")

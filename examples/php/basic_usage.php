@@ -377,7 +377,7 @@ function main() {
         
     } catch (Exception $e) {
         echo "❌ Error: " . $e->getMessage() . "\n";
-        echo "Make sure the database file exists at '../data/reflections.db'\n";
+        echo "Make sure the database file exists at '../../data/reflections.db'\n";
         echo "And PHP has SQLite3 extension enabled\n";
     }
 }

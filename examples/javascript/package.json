@@ -8,7 +8,7 @@
     "example": "node basic_usage.js"
   },
   "dependencies": {
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.7"
   },
   "keywords": [
     "aa",

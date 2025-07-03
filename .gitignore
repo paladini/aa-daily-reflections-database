@@ -1,0 +1,231 @@
+# AA Daily Reflections Database - .gitignore
+
+# =============================================================================
+# Node.js / JavaScript
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Dependency directories
+jspm_packages/
+
+# NPM
+.npm
+.npmrc
+
+# Yarn
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Package lock files (optional - uncomment if you want to ignore them)
+# package-lock.json
+# yarn.lock
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# =============================================================================
+# Go
+# =============================================================================
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go build output
+go.sum
+# go.mod (keep this file)
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
+
+# =============================================================================
+# PHP
+# =============================================================================
+# Composer
+/vendor/
+composer.phar
+composer.lock
+
+# Laravel
+/bootstrap/compiled.php
+/app/storage/
+
+# Symfony
+/app/cache/
+/app/logs/
+/app/config/parameters.yml
+
+# phpunit
+.phpunit.result.cache
+
+# =============================================================================
+# General Development
+# =============================================================================
+# IDEs and Editors
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# =============================================================================
+# Temporary and Build Files
+# =============================================================================
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Build directories
+build/
+dist/
+out/
+
+# Cache directories
+.cache/
+.parcel-cache/
+
+# =============================================================================
+# Database Files (if you want to ignore local test DBs)
+# =============================================================================
+# Uncomment if you want to ignore local database files
+# *.db-journal
+# *.sqlite3-journal
+
+# =============================================================================
+# Examples Specific
+# =============================================================================
+# Example output files
+examples/*/output/
+examples/*/logs/
+examples/*/cache/
+
+# Test data
+examples/*/test_data/
+examples/*/test_output/
+
+# =============================================================================
+# Documentation
+# =============================================================================
+# Generated documentation
+docs/_build/
+site/
+
+# =============================================================================
+# Misc
+# =============================================================================
+# Backup files
+*.bak
+*.backup
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Lock files (optional)
+# Uncomment these if you don't want to track lock files
+# package-lock.json
+# yarn.lock
+# composer.lock
+# Pipfile.lock

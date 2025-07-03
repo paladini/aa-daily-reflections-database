@@ -339,7 +339,7 @@ async function main() {
         
     } catch (error) {
         console.error('❌ Error:', error.message);
-        console.log('Make sure the database file exists at \'../data/reflections.db\'');
+        console.log('Make sure the database file exists at \'../../data/reflections.db\'');
         console.log('And install sqlite3 with: npm install sqlite3');
     }
 }
