@@ -4,13 +4,20 @@
  * AA Daily Reflections - PHP Usage Examples
  * 
  * This script demonstrates basic operations with the AA Daily Reflections database using PHP.
+ * Supports English, Spanish, French, and Brazilian Portuguese.
  * Requires: PHP with SQLite3 extension
  */
 
 class ReflectionsDB {
     private $dbPath;
+    private $languages = [
+        'english' => '🇺🇸 English',
+        'spanish' => '🇪🇸 Español',
+        'french' => '🇫🇷 Français',
+        'pt-BR' => '🇧🇷 Português (Brasil)'
+    ];
     
-    public function __construct($dbPath = '../data/reflections.db') {
+    public function __construct($dbPath = '../../data/reflections.db') {
         $this->dbPath = realpath(__DIR__ . '/' . $dbPath);
         if (!$this->dbPath || !file_exists($this->dbPath)) {
             throw new Exception("Database file not found: $dbPath");
@@ -237,9 +244,42 @@ function printMultilingualReflection($reflections, $date) {
     $languages = [
         'english' => '🇺🇸 ENGLISH',
         'spanish' => '🇪🇸 ESPAÑOL',
-        'french' => '🇫🇷 FRANÇAIS'
+        'french' => '🇫🇷 FRANÇAIS',
+        'pt-BR' => '🇧🇷 PORTUGUÊS (BRASIL)'
     ];
     
+    $languageKeys = array_keys($languages);
+    $index = 0;
+    foreach ($languages as $langCode => $langDisplay) {
+        if (isset($reflections[$langCode])) {
+            $reflection = $reflections[$langCode];
+            echo "\n" . str_pad($langDisplay, 100, ' ', STR_PAD_BOTH) . "\n";
+            echo str_repeat('─', 100) . "\n";
+            
+            echo "📖 " . $reflection['title'] . "\n\n";
+            
+            // Quote in a box
+            $quoteLines = wrapText($reflection['quote'], 90);
+            echo "┌" . str_repeat('─', 92) . "┐\n";
+            foreach ($quoteLines as $line) {
+                echo "│ " . str_pad($line, 90) . " │\n";
+            }
+            echo "└" . str_repeat('─', 92) . "┘\n\n";
+            
+            // Reflection text
+            $textLines = wrapText($reflection['text'], 95);
+            foreach ($textLines as $line) {
+                echo "   $line\n";
+            }
+            
+            echo "\n📚 " . $reflection['reference'] . "\n";
+            
+            if ($index < count($languageKeys) - 1) {
+                echo "\n" . str_repeat('·', 100) . "\n";
+            }
+        }
+        $index++;
+    }
     $languageKeys = array_keys($languages);
     foreach ($languages as $langCode => $langDisplay) {
         if (isset($reflections[$langCode])) {
@@ -290,12 +330,12 @@ function main() {
         $multilingualReflections = $db->getMultilingualReflection('2025-01-01');
         printMultilingualReflection($multilingualReflections, '2025-01-01');
         
-        // Example 3: Random reflection
-        echo "\n3️⃣  Random Reflection (French):\n";
-        $randomReflection = $db->getRandomReflection('french');
+        // Example 3: Random reflection in Portuguese
+        echo "\n3️⃣  Random Reflection (Brazilian Portuguese):\n";
+        $randomReflection = $db->getRandomReflection('pt-BR');
         printReflection($randomReflection);
         
-        // Example 4: Search
+        // Example 4: Search in English
         echo "\n4️⃣  Search Results for 'gratitude':\n";
         $searchResults = $db->searchReflections('gratitude', 'english');
         echo "Found " . count($searchResults) . " reflections containing 'gratitude':\n";
@@ -304,23 +344,40 @@ function main() {
             printReflection($reflection, false);
         }
         
-        // Example 5: Statistics
-        echo "\n5️⃣  Database Statistics:\n";
+        // Example 5: Search in Portuguese
+        echo "\n5️⃣  Search Results for 'Deus' (Portuguese):\n";
+        $searchResultsPt = $db->searchReflections('Deus', 'pt-BR');
+        echo "Found " . count($searchResultsPt) . " reflections containing 'Deus':\n";
+        foreach (array_slice($searchResultsPt, 0, 1) as $index => $reflection) {
+            echo "\n   Resultado " . ($index + 1) . ":\n";
+            printReflection($reflection, false);
+        }
+        
+        // Example 6: Statistics
+        echo "\n6️⃣  Database Statistics:\n";
         $stats = $db->getStatistics();
         echo "┌" . str_repeat('─', 48) . "┐\n";
         echo "│ " . str_pad('📊 DATABASE STATISTICS', 46, ' ', STR_PAD_BOTH) . " │\n";
         echo "├" . str_repeat('─', 48) . "┤\n";
         echo "│ Total Reflections: " . str_pad($stats['total_reflections'], 28, ' ', STR_PAD_LEFT) . " │\n";
         echo "├" . str_repeat('─', 48) . "┤\n";
+        
+        $languages = [
+            'english' => 'English',
+            'spanish' => 'Español',
+            'french' => 'Français',
+            'pt-BR' => 'Português'
+        ];
+        
         foreach ($stats['by_language'] as $lang => $count) {
-            $langName = ucfirst($lang);
-            echo "│ " . str_pad($langName, 15, ' ', STR_PAD_LEFT) . ": " . str_pad($count, 28, ' ', STR_PAD_LEFT) . " │\n";
+            $langDisplay = $languages[$lang] ?? ucfirst($lang);
+            echo "│ " . str_pad($langDisplay, 15, ' ', STR_PAD_LEFT) . ": " . str_pad($count, 28, ' ', STR_PAD_LEFT) . " │\n";
         }
         echo "└" . str_repeat('─', 48) . "┘\n";
         
     } catch (Exception $e) {
         echo "❌ Error: " . $e->getMessage() . "\n";
-        echo "Make sure the database file exists at '../data/reflections.db'\n";
+        echo "Make sure the database file exists at '../../data/reflections.db'\n";
         echo "And PHP has SQLite3 extension enabled\n";
     }
 }

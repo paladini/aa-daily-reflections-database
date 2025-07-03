@@ -1,6 +1,6 @@
 # 📊 AA Daily Reflections Data
 
-This folder contains the complete year of Alcoholics Anonymous daily reflections in 3 different formats and 3 languages.
+This folder contains the complete year of Alcoholics Anonymous daily reflections in 3 different formats and 4 languages.
 
 ## 📥 Direct Downloads
 
@@ -13,6 +13,7 @@ This folder contains the complete year of Alcoholics Anonymous daily reflections
 - [`daily_reflections_english.json`](daily_reflections_english.json) - English reflections
 - [`daily_reflections_french.json`](daily_reflections_french.json) - French reflections  
 - [`daily_reflections_spanish.json`](daily_reflections_spanish.json) - Spanish reflections
+- [`daily_reflections_brazilian-portuguese.json`](daily_reflections_brazilian-portuguese.json) - Brazilian Portuguese reflections
 
 ### 📊 CSV Spreadsheets
 
@@ -20,6 +21,7 @@ This folder contains the complete year of Alcoholics Anonymous daily reflections
 - [`daily_reflections_english.csv`](daily_reflections_english.csv) - English spreadsheet
 - [`daily_reflections_french.csv`](daily_reflections_french.csv) - French spreadsheet
 - [`daily_reflections_spanish.csv`](daily_reflections_spanish.csv) - Spanish spreadsheet
+- [`daily_reflections_brazilian-portuguese.csv`](daily_reflections_brazilian-portuguese.csv) - Brazilian Portuguese spreadsheet
 
 #### Combined File
 - [`daily_reflections_all_languages.csv`](daily_reflections_all_languages.csv) - **All languages in one file**
@@ -41,7 +43,7 @@ Each reflection contains the following fields:
 
 ### CSV Fields
 - **Date**: Date in YYYY-MM-DD format
-- **Language**: Language (english, french, spanish)
+- **Language**: Language (english, french, spanish, pt-BR)
 - **Title**: Reflection title
 - **Quote**: Inspirational quote/phrase
 - **Text**: Complete reflection text

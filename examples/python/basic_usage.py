@@ -3,6 +3,7 @@
 AA Daily Reflections - Basic Usage Examples
 
 This script demonstrates basic operations with the AA Daily Reflections database.
+Supports English, Spanish, French, and Brazilian Portuguese.
 """
 
 import sqlite3
@@ -13,7 +14,15 @@ import random
 class ReflectionsDB:
     """Simple class to interact with the reflections database."""
     
-    def __init__(self, db_path='../data/reflections.db'):
+    # Language mappings
+    LANGUAGES = {
+        'english': 'English',
+        'spanish': 'Español', 
+        'french': 'Français',
+        'pt-BR': 'Português (Brasil)'
+    }
+    
+    def __init__(self, db_path='../../data/reflections.db'):
         self.db_path = db_path
     
     def get_connection(self):
@@ -210,10 +219,12 @@ def create_daily_display(reflections_dict, date_str):
     languages = {
         'english': '🇺🇸 ENGLISH',
         'spanish': '🇪🇸 ESPAÑOL', 
-        'french': '🇫🇷 FRANÇAIS'
+        'french': '🇫🇷 FRANÇAIS',
+        'pt-BR': '🇧🇷 PORTUGUÊS (BRASIL)'
     }
     
-    for lang_code, lang_display in languages.items():
+    lang_keys = list(languages.keys())
+    for i, (lang_code, lang_display) in enumerate(languages.items()):
         if lang_code in reflections_dict and reflections_dict[lang_code]:
             reflection = reflections_dict[lang_code]
             print(f"\n{lang_display:^100}")
@@ -238,14 +249,14 @@ def create_daily_display(reflections_dict, date_str):
             
             print(f"\n📚 {reflection['reference']}")
             
-            if lang_code != 'french':  # Don't add separator after the last language
+            if i < len(lang_keys) - 1:  # Don't add separator after the last language
                 print(f"\n{'·' * 100}")
     
     print(f"\n{'═' * 100}")
 
 def compare_translations(db, date_str):
     """Compare the same reflection across all languages."""
-    languages = ['english', 'spanish', 'french']
+    languages = ['english', 'spanish', 'french', 'pt-BR']
     reflections = {}
     
     for lang in languages:
@@ -290,8 +301,8 @@ def main():
         compare_translations(db, '2025-01-01')
         
         # Example 3: Get a random reflection
-        print("\n3️⃣  Random Reflection (Spanish):")
-        random_reflection = db.get_random_reflection('spanish')
+        print("\n3️⃣  Random Reflection (Brazilian Portuguese):")
+        random_reflection = db.get_random_reflection('pt-BR')
         print_reflection(random_reflection)
         
         # Example 4: Search for reflections
@@ -302,8 +313,16 @@ def main():
             print(f"\n   Result {i}:")
             print_reflection(reflection, show_full_text=False)
         
-        # Example 5: Database statistics
-        print("\n5️⃣  Database Statistics:")
+        # Example 5: Search in Portuguese
+        print("\n5️⃣  Search Results for 'Deus' (Portuguese):")
+        search_results_pt = db.search_reflections('Deus', 'pt-BR')
+        print(f"Found {len(search_results_pt)} reflections containing 'Deus':")
+        for i, reflection in enumerate(search_results_pt[:1], 1):  # Show first 1
+            print(f"\n   Resultado {i}:")
+            print_reflection(reflection, show_full_text=False)
+        
+        # Example 6: Database statistics
+        print("\n6️⃣  Database Statistics:")
         stats = db.get_statistics()
         print(f"┌{'─' * 48}┐")
         print(f"│ {'📊 DATABASE STATISTICS':^46} │")
@@ -311,7 +330,8 @@ def main():
         print(f"│ Total Reflections: {stats['total_reflections']:>28} │")
         print(f"├{'─' * 48}┤")
         for lang, count in stats['by_language'].items():
-            print(f"│ {lang.title():>15}: {count:>28} │")
+            lang_display = db.LANGUAGES.get(lang, lang.title())
+            print(f"│ {lang_display:>15}: {count:>28} │")
         print(f"└{'─' * 48}┘")
         
     except Exception as e:
