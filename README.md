@@ -136,6 +136,7 @@ english_reflections = df[df['language'] == 'english']
 | English  | `en` | English     | Complete year (365 days) |
 | French   | `fr` | Français    | Complete year (365 days) |
 | Spanish  | `es` | Español     | Complete year (365 days) |
+| Brazilian Portuguese  | `pt-BR` | Português do Brasil     | Complete year (365 days) |
 
 ## 🤝 Contributing
 
