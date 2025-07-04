@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://paladini.github.io/aa-daily-reflections-database/sitemap.xml
+
+# Crawl-delay para ser respeitoso com os crawlers
+Crawl-delay: 1

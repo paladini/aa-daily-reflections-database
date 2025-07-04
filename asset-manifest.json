@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/aa-daily-reflections-database/static/css/main.f28d0b46.css",
+    "main.js": "/aa-daily-reflections-database/static/js/main.890afe6d.js",
+    "index.html": "/aa-daily-reflections-database/index.html",
+    "main.f28d0b46.css.map": "/aa-daily-reflections-database/static/css/main.f28d0b46.css.map",
+    "main.890afe6d.js.map": "/aa-daily-reflections-database/static/js/main.890afe6d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f28d0b46.css",
+    "static/js/main.890afe6d.js"
+  ]
+}
