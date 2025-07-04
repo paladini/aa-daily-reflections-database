@@ -20,7 +20,9 @@ const loadLanguageData = async (lang) => {
 
   try {
     // Carrega o arquivo JSON do diretório public/data
-    const response = await fetch(`/data/${languageInfo.file}`);
+    // Usa process.env.PUBLIC_URL para funcionar tanto localmente quanto no GitHub Pages
+    const baseUrl = process.env.PUBLIC_URL || '';
+    const response = await fetch(`${baseUrl}/data/${languageInfo.file}`);
     
     if (!response.ok) {
       throw new Error(`Erro ao carregar dados: ${response.status}`);
