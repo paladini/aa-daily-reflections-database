@@ -9,6 +9,31 @@
 
 **📖 Read this in other languages:** [🇪🇸 Español](README_ES.md) | [🇫🇷 Français](README_FR.md) | [🇧🇷 Português](README_PT.md)
 
+## 🌐 Live Portal
+
+**[📖 Access the Live Portal](https://paladini.github.io/aa-daily-reflections-database)**
+
+Browse and read daily reflections in a beautiful, multilingual web interface with:
+- 🌍 **4 languages**: English, Spanish, French, Brazilian Portuguese
+- 📅 **Easy navigation**: Previous/Next day, date picker, "Today" button
+- 📱 **Responsive design**: Works perfectly on mobile and desktop
+- 🔗 **Shareable URLs**: Every reflection has a unique, shareable link
+- 🔍 **SEO optimized**: Each reflection is searchable and indexable
+
+---
+
+## 👨‍💻 Created by Fernando Paladini
+
+This database and portal were **compiled, developed, and maintained** by [Fernando Paladini](https://github.com/paladini).
+
+- **📊 Data Compilation**: Carefully collected and structured from official AA sources
+- **🌐 Multilingual Translation**: Sourced authentic translations in 4 languages  
+- **💻 Portal Development**: Built a modern React-based web portal
+- **🔧 Technical Implementation**: Database design, API structure, and deployment
+- **📈 SEO Optimization**: Multilingual SEO with hreflang, structured data, and sitemaps
+
+*If this project helps your recovery journey or development work, consider [⭐ starring the repository](https://github.com/paladini/aa-daily-reflections-database) or [☕ supporting the project](https://github.com/sponsors/paladini).*
+
 ## 🚀 Quick Download
 
 Choose your preferred format and language:
@@ -148,11 +173,33 @@ MIT License - Free to use for educational and recovery purposes.
 
 **Important**: This is an unofficial compilation. Original content belongs to Alcoholics Anonymous World Services, Inc.
 
+## 🙏 Acknowledgments
+
+- **Alcoholics Anonymous World Services, Inc.** for the original daily reflections content
+- **AA communities worldwide** who provided translations and cultural adaptations
+- **Recovery community** for inspiration and feedback
+
+## 📬 Contact & Support
+
+**Fernando Paladini** - Project Creator & Maintainer
+- 🌐 Website: [paladini.dev](https://paladini.dev)
+- 📧 Email: fnpaladini+aa+database@gmail.com
+- 🐙 GitHub: [@paladini](https://github.com/paladini)
+
+### Support This Project
+If this database helps your recovery journey or development work:
+- ⭐ [Star this repository](https://github.com/paladini/aa-daily-reflections-database)
+- 🐛 [Report issues](https://github.com/paladini/aa-daily-reflections-database/issues)
+- 💡 [Suggest improvements](https://github.com/paladini/aa-daily-reflections-database/discussions)
+- ☕ [Buy me a coffee](https://github.com/sponsors/paladini)
+
 ---
 
 <div align="center">
 
 **"One day at a time"** 🌟  
 *Dedicated to the recovery community worldwide*
+
+**Created with ❤️ by [Fernando Paladini](https://github.com/paladini)**
 
 </div>
