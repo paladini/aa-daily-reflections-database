@@ -1,5 +1,6 @@
-# 📖 AA Daily Reflections Database
+﻿# ðŸ“– AA Daily Reflections Database
 
+<img alt="Harness Score L0" src="https://paladini.github.io/harness-score/maturity/badge-l0.svg" height="20">
 **Complete year of Alcoholics Anonymous Daily Reflections in English, Spanish, French, and Brazilian Portuguese**
 
 *365 daily meditations and spiritual reflections from AA available in multiple formats (SQLite, JSON, CSV) for recovery apps, multilingual communities, and personal spiritual practice.*
@@ -7,50 +8,50 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Languages](https://img.shields.io/badge/Languages-4-blue.svg)]()
 
-**📖 Read this in other languages:** [🇪🇸 Español](README_ES.md) | [🇫🇷 Français](README_FR.md) | [🇧🇷 Português](README_PT.md)
+**ðŸ“– Read this in other languages:** [ðŸ‡ªðŸ‡¸ EspaÃ±ol](README_ES.md) | [ðŸ‡«ðŸ‡· FranÃ§ais](README_FR.md) | [ðŸ‡§ðŸ‡· PortuguÃªs](README_PT.md)
 
-## 🌐 Live Portal
+## ðŸŒ Live Portal
 
-**[📖 Access the Live Portal](https://paladini.github.io/aa-daily-reflections-database)**
+**[ðŸ“– Access the Live Portal](https://paladini.github.io/aa-daily-reflections-database)**
 
 Browse and read daily reflections in a beautiful, multilingual web interface with:
-- 🌍 **4 languages**: English, Spanish, French, Brazilian Portuguese
-- 📅 **Easy navigation**: Previous/Next day, date picker, "Today" button
-- 📱 **Responsive design**: Works perfectly on mobile and desktop
-- 🔗 **Shareable URLs**: Every reflection has a unique, shareable link
-- 🔍 **SEO optimized**: Each reflection is searchable and indexable
+- ðŸŒ **4 languages**: English, Spanish, French, Brazilian Portuguese
+- ðŸ“… **Easy navigation**: Previous/Next day, date picker, "Today" button
+- ðŸ“± **Responsive design**: Works perfectly on mobile and desktop
+- ðŸ”— **Shareable URLs**: Every reflection has a unique, shareable link
+- ðŸ” **SEO optimized**: Each reflection is searchable and indexable
 
 ---
 
-## 👨‍💻 Created by Fernando Paladini
+## ðŸ‘¨â€ðŸ’» Created by Fernando Paladini
 
 This database and portal were **compiled, developed, and maintained** by [Fernando Paladini](https://github.com/paladini).
 
-- **📊 Data Compilation**: Carefully collected and structured from official AA sources
-- **🌐 Multilingual Translation**: Sourced authentic translations in 4 languages  
-- **💻 Portal Development**: Built a modern React-based web portal
-- **🔧 Technical Implementation**: Database design, API structure, and deployment
-- **📈 SEO Optimization**: Multilingual SEO with hreflang, structured data, and sitemaps
+- **ðŸ“Š Data Compilation**: Carefully collected and structured from official AA sources
+- **ðŸŒ Multilingual Translation**: Sourced authentic translations in 4 languages  
+- **ðŸ’» Portal Development**: Built a modern React-based web portal
+- **ðŸ”§ Technical Implementation**: Database design, API structure, and deployment
+- **ðŸ“ˆ SEO Optimization**: Multilingual SEO with hreflang, structured data, and sitemaps
 
-*If this project helps your recovery journey or development work, consider [⭐ starring the repository](https://github.com/paladini/aa-daily-reflections-database) or [☕ supporting the project](https://github.com/sponsors/paladini).*
+*If this project helps your recovery journey or development work, consider [â­ starring the repository](https://github.com/paladini/aa-daily-reflections-database) or [â˜• supporting the project](https://github.com/sponsors/paladini).*
 
-## 🚀 Quick Download
+## ðŸš€ Quick Download
 
 Choose your preferred format and language:
 
-### 📊 All Languages Combined
+### ðŸ“Š All Languages Combined
 - **CSV**: [daily_reflections_all_languages.csv](data/daily_reflections_2025_all_languages.csv)
 - **SQLite**: [reflections.db](data/reflections.db)
 
-### 📄 Individual Languages
+### ðŸ“„ Individual Languages
 | Language | JSON | CSV |
 |----------|------|-----|
-| 🇺🇸 **English** | [JSON](data/daily_reflections_english.json) | [CSV](data/daily_reflections_english.csv) |
-| 🇪🇸 **Español** | [JSON](data/daily_reflections_spanish.json) | [CSV](data/daily_reflections_spanish.csv) |
-| 🇫🇷 **Français** | [JSON](data/daily_reflections_french.json) | [CSV](data/daily_reflections_french.csv) |
-| 🇧🇷 **Português** | [JSON](data/daily_reflections_brazilian-portuguese.json) | [CSV](data/daily_reflections_brazilian-portuguese.csv) |
+| ðŸ‡ºðŸ‡¸ **English** | [JSON](data/daily_reflections_english.json) | [CSV](data/daily_reflections_english.csv) |
+| ðŸ‡ªðŸ‡¸ **EspaÃ±ol** | [JSON](data/daily_reflections_spanish.json) | [CSV](data/daily_reflections_spanish.csv) |
+| ðŸ‡«ðŸ‡· **FranÃ§ais** | [JSON](data/daily_reflections_french.json) | [CSV](data/daily_reflections_french.csv) |
+| ðŸ‡§ðŸ‡· **PortuguÃªs** | [JSON](data/daily_reflections_brazilian-portuguese.json) | [CSV](data/daily_reflections_brazilian-portuguese.csv) |
 
-## 📋 What's Included
+## ðŸ“‹ What's Included
 
 - **Complete year coverage**: All 365 days of AA daily reflections
 - **Multilingual**: Available in English, Spanish, French, and Brazilian Portuguese
@@ -58,7 +59,7 @@ Choose your preferred format and language:
 - **Multiple formats**: SQLite database, JSON files, and CSV spreadsheets
 - **Ready to use**: Perfect for apps, websites, or personal projects
 
-## 📊 Data Structure
+## ðŸ“Š Data Structure
 
 Each reflection contains:
 
@@ -73,11 +74,11 @@ Each reflection contains:
 }
 ```
 
-**📁 For more details about data formats, see [data/README.md](data/README.md)**
+**ðŸ“ For more details about data formats, see [data/README.md](data/README.md)**
 
-## 💻 Code Examples
+## ðŸ’» Code Examples
 
-**📝 Ready-to-run examples in multiple languages: [examples/README.md](examples/README.md)**
+**ðŸ“ Ready-to-run examples in multiple languages: [examples/README.md](examples/README.md)**
 
 ### Quick Start
 
@@ -113,7 +114,7 @@ const todayReflection = reflections.find(r => r.date === today);
 console.log(`Today: ${todayReflection.title}`);
 ```
 
-## 🚀 Getting Started
+## ðŸš€ Getting Started
 
 ### Option 1: SQLite Database
 ```python
@@ -154,52 +155,52 @@ df = pd.read_csv('data/daily_reflections_2025_all_languages.csv')
 english_reflections = df[df['language'] == 'english']
 ```
 
-## 🌍 Available Languages
+## ðŸŒ Available Languages
 
 | Language | Code | Native Name | Coverage |
 |----------|------|-------------|----------|
 | English  | `en` | English     | Complete year (365 days) |
-| French   | `fr` | Français    | Complete year (365 days) |
-| Spanish  | `es` | Español     | Complete year (365 days) |
-| Brazilian Portuguese  | `pt-BR` | Português do Brasil     | Complete year (365 days) |
+| French   | `fr` | FranÃ§ais    | Complete year (365 days) |
+| Spanish  | `es` | EspaÃ±ol     | Complete year (365 days) |
+| Brazilian Portuguese  | `pt-BR` | PortuguÃªs do Brasil     | Complete year (365 days) |
 
-## 🤝 Contributing
+## ðŸ¤ Contributing
 
 Found an error or want to help? See our [contributing guidelines](CONTRIBUTING.md)
 
-## 📜 License
+## ðŸ“œ License
 
 MIT License - Free to use for educational and recovery purposes.
 
 **Important**: This is an unofficial compilation. Original content belongs to Alcoholics Anonymous World Services, Inc.
 
-## 🙏 Acknowledgments
+## ðŸ™ Acknowledgments
 
 - **Alcoholics Anonymous World Services, Inc.** for the original daily reflections content
 - **AA communities worldwide** who provided translations and cultural adaptations
 - **Recovery community** for inspiration and feedback
 
-## 📬 Contact & Support
+## ðŸ“¬ Contact & Support
 
 **Fernando Paladini** - Project Creator & Maintainer
-- 🌐 Website: [paladini.dev](https://paladini.dev)
-- 📧 Email: fnpaladini+aa+database@gmail.com
-- 🐙 GitHub: [@paladini](https://github.com/paladini)
+- ðŸŒ Website: [paladini.dev](https://paladini.dev)
+- ðŸ“§ Email: fnpaladini+aa+database@gmail.com
+- ðŸ™ GitHub: [@paladini](https://github.com/paladini)
 
 ### Support This Project
 If this database helps your recovery journey or development work:
-- ⭐ [Star this repository](https://github.com/paladini/aa-daily-reflections-database)
-- 🐛 [Report issues](https://github.com/paladini/aa-daily-reflections-database/issues)
-- 💡 [Suggest improvements](https://github.com/paladini/aa-daily-reflections-database/discussions)
-- ☕ [Buy me a coffee](https://github.com/sponsors/paladini)
+- â­ [Star this repository](https://github.com/paladini/aa-daily-reflections-database)
+- ðŸ› [Report issues](https://github.com/paladini/aa-daily-reflections-database/issues)
+- ðŸ’¡ [Suggest improvements](https://github.com/paladini/aa-daily-reflections-database/discussions)
+- â˜• [Buy me a coffee](https://github.com/sponsors/paladini)
 
 ---
 
 <div align="center">
 
-**"One day at a time"** 🌟  
+**"One day at a time"** ðŸŒŸ  
 *Dedicated to the recovery community worldwide*
 
-**Created with ❤️ by [Fernando Paladini](https://github.com/paladini)**
+**Created with â¤ï¸ by [Fernando Paladini](https://github.com/paladini)**
 
 </div>
